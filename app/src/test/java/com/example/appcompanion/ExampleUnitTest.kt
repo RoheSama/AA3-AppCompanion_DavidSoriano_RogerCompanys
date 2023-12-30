@@ -1,4 +1,4 @@
-package com.example.aa3_appcompanion_davidsorianorogercompanys
+package com.example.appcompanion
 
 import org.junit.Test
 
