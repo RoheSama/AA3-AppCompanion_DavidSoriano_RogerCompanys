@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">AA3-AppCompanion-DavidSorianoRogerCompanys</string>
+    <string name="app_name">AppCompanion</string>
+    <string name="field_email_label">Email</string>
+    <string name="field_password_label">Password</string>
+    <string name="home_title">Home</string>
+    <string name="chat_title">Chat</string>
+    <string name="login_title">Login</string>
+    <string name="field_verify_password_label">Verify Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="back_to_login_button">Return To Login</string>
+    <string name="end_register_button">Finish Register</string>
+    <string name="login_error">Error on try login</string>
+    <string name="user_login_message">Hello %s you are loged</string>
+    <string name="unknown_user">User Unknown</string>
 </resources>

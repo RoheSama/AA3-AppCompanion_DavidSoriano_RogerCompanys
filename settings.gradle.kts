@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AA3-AppCompanion-DavidSorianoRogerCompanys"
+rootProject.name = "AppCompanion"
 include(":app")
+ 

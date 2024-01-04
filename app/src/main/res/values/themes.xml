@@ -1,5 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AppCompanion" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/baseLight</item>
+        <item name="colorPrimaryVariant">@color/lighterLight</item>
+        <item name="colorOnPrimary">@color/baseGrey</item>
+        <item name="android:textColorPrimary">@color/baseLight</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/baseGrey</item>
+        <item name="colorSecondaryVariant">@color/lighterGrey</item>
+        <item name="colorOnSecondary">@color/baseLight</item>
+        <item name="android:textColorSecondary">@color/debugColor</item>
+        <!-- Surface Colors -->
+        <item name="colorSurface">?attr/colorSecondary</item>
+        <item name="colorOnSurface">@color/clearColor</item>
+        <!-- Background App -->
+        <item name="android:colorBackground">@color/baseLight</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/baseGrey</item>
+        <!-- Shadow Setup -->
+        <item name="android:ambientShadowAlpha">0.7</item>
+        <item name="android:spotShadowAlpha">0.7</item>
 
-    <style name="Theme.AA3AppCompanionDavidSorianoRogerCompanys" parent="android:Theme.Material.Light.NoActionBar" />
+        <!-- Customize your theme here. -->
+        <item name="navigationViewStyle">@style/AppCompanion.Drawer</item>
+        <item name="toolbarStyle">@style/AppCompanion.Toolbar</item>
+        <item name="bottomNavigationStyle">@style/AppCompanion.BottomBar</item>
+        <item name="materialCardViewStyle">@style/AppCompanion.CardView</item>
+        <item name="textInputStyle">@style/AppCompanion.Input</item>
+        <item name="materialButtonStyle">@style/AppCompanion.Button</item>
+        <item name="extendedFloatingActionButtonStyle">@style/AppCompanion.FloatingButtonExtended</item>
+        <item name="snackbarStyle">@style/AppCompanion.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/AppCompanion.SnackBar.TextView</item>
+    </style>
+
+    <style name="Theme.AppCompanion" parent="Base.Theme.AppCompanion" />
+
+    <style name="AppCompanion.Drawer" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemIconTint">@color/shadowColor</item>
+        <item name="itemTextColor">@color/shadowColor</item>
+        <item name="elevation">@dimen/shadow_elevation</item>
+    </style>
+
+    <style name="AppCompanion.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/baseGrey</item>
+        <item name="android:elevation">@dimen/shadow_elevation</item>
+        <item name="navigationIconTint">@color/baseLight</item>
+    </style>
+
+    <style name="AppCompanion.BottomBar" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/baseGrey</item>
+        <item name="android:elevation">@dimen/shadow_elevation</item>
+        <item name="itemIconTint">@color/selectables_buttons_color</item>
+        <item name="itemRippleColor">@color/baseLightAlphaLow</item>
+    </style>
+
+    <style name="AppCompanion.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">@dimen/shadow_elevation</item>
+    </style>
+
+    <style name="AppCompanion.Input" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxStrokeWidth">@dimen/tiny</item>
+        <item name="boxStrokeWidthFocused">@dimen/tiny</item>
+        <item name="boxStrokeErrorColor">@color/baseRed</item>
+        <item name="android:textColorHint">@color/baseLight</item>
+        <item name="hintTextColor">@color/lighterLight</item>
+        <item name="startIconTint">@color/baseLight</item>
+        <item name="endIconTint">@color/baseLight</item>
+    </style>
+
+    <style name="AppCompanion.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/baseLight</item>
+        <item name="backgroundTint">@color/baseGrey</item>
+        <item name="rippleColor">@color/darkestLight</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:elevation">@dimen/shadow_elevation</item>
+    </style>
+
+    <style name="AppCompanion.Button.NoShadow" parent="AppCompanion.Button">
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="AppCompanion.FloatingButtonExtended" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+
+    </style>
+
+    <style name="AppCompanion.Snackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="elevation">@dimen/shadow_elevation</item>
+    </style>
+
+    <style name="AppCompanion.SnackBar.TextView" parent="Widget.MaterialComponents.Snackbar.TextView">
+        <item name="android:textColor">@color/baseLight</item>
+    </style>
 </resources>
