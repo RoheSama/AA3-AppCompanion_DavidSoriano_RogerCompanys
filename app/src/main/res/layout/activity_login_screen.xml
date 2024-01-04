@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginScreen">
+    tools:context=".screens.LoginScreen">
 
     <ImageView
         android:id="@+id/imageView11"
@@ -108,6 +108,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_normal"
             >
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/login_google_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
 
         </com.google.android.material.card.MaterialCardView>
 

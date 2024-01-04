@@ -1,11 +1,12 @@
-package com.example.appcompanion
+package com.example.appcompanion.screens
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.appcompanion.R
 
-class MainActivity : AppCompatActivity() {
+class MainScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

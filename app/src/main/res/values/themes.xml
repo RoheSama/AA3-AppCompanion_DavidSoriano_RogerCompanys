@@ -36,8 +36,8 @@
     <style name="Theme.AppCompanion" parent="Base.Theme.AppCompanion" />
 
     <style name="AppCompanion.Drawer" parent="Widget.MaterialComponents.NavigationView">
-        <item name="itemIconTint">@color/baseLight</item>
-        <item name="itemTextColor">@color/baseLight</item>
+        <item name="itemIconTint">@color/shadowColor</item>
+        <item name="itemTextColor">@color/shadowColor</item>
         <item name="elevation">@dimen/shadow_elevation</item>
     </style>
 
