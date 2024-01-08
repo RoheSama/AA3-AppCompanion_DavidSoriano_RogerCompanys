@@ -1,5 +1,4 @@
 package com.example.appcompanion.utilities.firebase
-
 import com.example.appcompanion.utilities.models.DbBaseData
 import com.example.appcompanion.utilities.models.DbUser
 import com.google.firebase.firestore.ktx.firestore
