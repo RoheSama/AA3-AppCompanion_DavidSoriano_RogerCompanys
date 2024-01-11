@@ -26,18 +26,29 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_normal"
         >
+
+        <EditText
+            android:id="@+id/emailTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="e.g 8"
+            android:inputType="text|textAutoComplete"
+            android:minHeight="48dp" />
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/usernameInput"
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:startIconDrawable="@drawable/email_icon"
             android:hint="@string/field_email_label"
             >
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                />
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -47,6 +58,16 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_normal"
             >
+
+            <EditText
+                android:id="@+id/passwordTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="e.g 8"
+                android:inputType="text|textAutoComplete"
+                android:minHeight="48dp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passwordInput"
                 android:layout_width="match_parent"
@@ -55,11 +76,13 @@
                 android:hint="@string/field_password_label"
                 app:endIconMode="password_toggle"
                 >
+
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    />
+                    android:inputType="textPassword" />
+
             </com.google.android.material.textfield.TextInputLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -70,22 +93,7 @@
             android:layout_margin="@dimen/margin_normal"
             android:visibility="gone"
             tools:visibility="visible"
-            >
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/verifyPasswordInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:startIconDrawable="@drawable/password_icon"
-                android:hint="@string/field_verify_password_label"
-                app:endIconMode="password_toggle"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-        </com.google.android.material.card.MaterialCardView>
+            />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/loginButton"
