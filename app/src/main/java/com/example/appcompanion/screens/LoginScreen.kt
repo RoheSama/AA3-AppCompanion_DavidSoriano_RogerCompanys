@@ -11,14 +11,19 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginScreen : AppCompatActivity() {
-
-    var loginButton = findViewById<Button>(R.id.loginButton)
-    var registerButton = findViewById<Button>(R.id.registerButton)
-    var emailText = findViewById<EditText>(R.id.emailTextInput)
-    var passwordText = findViewById<EditText>(R.id.passwordTextInput)
+    lateinit var loginButton: Button
+    lateinit var registerButton: Button
+    lateinit var emailText: EditText
+    lateinit var passwordText: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen)
+
+        loginButton = findViewById(R.id.loginButton)
+        registerButton = findViewById(R.id.registerButton)
+        emailText = findViewById(R.id.emailTextInput)
+        passwordText = findViewById(R.id.passwordTextInput)
+
 
         val analytics = FirebaseAnalytics.getInstance(this)
         val bundle = Bundle();
