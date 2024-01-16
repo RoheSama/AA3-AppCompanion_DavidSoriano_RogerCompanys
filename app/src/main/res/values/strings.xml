@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppCompanion</string>
+    <string name="prefs_file">com.rogercompanysdavidsoriano.appcompanion.PREEFERENCE_FILE_KEY</string>
 </resources>
