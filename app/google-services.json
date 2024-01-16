@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1017763805395",
+    "project_id": "appcompanion-37f24",
+    "storage_bucket": "appcompanion-37f24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017763805395:android:1231b608c46227a8affc26",
+        "android_client_info": {
+          "package_name": "com.rogercompanysdavidsoriano.appcompanion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6ZSxAhyasKB2K-1JZOuweMVmK4qFkTtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
