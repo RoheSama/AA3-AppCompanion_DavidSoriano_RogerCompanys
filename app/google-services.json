@@ -12,7 +12,20 @@
           "package_name": "com.rogercompanysdavidsoriano.appcompanion"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1017763805395-t5heia128u70epieeh588qv7k39mebg7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rogercompanysdavidsoriano.appcompanion",
+            "certificate_hash": "27144a28fc594dd2ccaec24df770bde932d8b6e2"
+          }
+        },
+        {
+          "client_id": "1017763805395-es31vv9747nacn5gre21rnmkn4dh931g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD6ZSxAhyasKB2K-1JZOuweMVmK4qFkTtE"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017763805395-es31vv9747nacn5gre21rnmkn4dh931g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

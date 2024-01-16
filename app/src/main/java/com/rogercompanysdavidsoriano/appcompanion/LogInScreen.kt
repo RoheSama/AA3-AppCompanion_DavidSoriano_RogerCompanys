@@ -99,7 +99,7 @@ class LogInScreen : AppCompatActivity() {
         googleButton.setOnClickListener {
             // Configuracio de autenticacio
             val googleConf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.app_name))
+                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build()
 
@@ -150,6 +150,7 @@ class LogInScreen : AppCompatActivity() {
                     }
                 }
             }catch (e:ApiException){
+                e.printStackTrace()
                 showAlert()
             }
 
