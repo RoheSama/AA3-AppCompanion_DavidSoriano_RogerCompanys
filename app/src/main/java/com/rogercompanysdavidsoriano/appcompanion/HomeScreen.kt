@@ -11,6 +11,8 @@ import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.messaging.FirebaseMessaging
 import android.Manifest
+import com.google.firebase.crashlytics.FirebaseCrashlytics
+import java.lang.RuntimeException
 
 enum class ProviderType {
     BASIC,
@@ -26,11 +28,13 @@ class HomeScreen : AppCompatActivity() {
     }
 
     private lateinit var logOutButton: Button
+    private lateinit var errorButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
 
         logOutButton = findViewById(R.id.logOutButton)
+        errorButton = findViewById(R.id.errorButton)
 
         askNotificationPermission()
 
@@ -97,5 +101,18 @@ class HomeScreen : AppCompatActivity() {
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
         }
+
+        errorButton.setOnClickListener{
+            // Enviem a firebase informacio del usuari que se li ha produit lerror
+            FirebaseCrashlytics.getInstance().setUserId(email)
+            FirebaseCrashlytics.getInstance().setCustomKey("provider", provdirer)
+
+            // Context de l'error
+            FirebaseCrashlytics.getInstance().log("Se ha pulsado el error de forzar.")
+
+            // Forcem un error
+            throw RuntimeException("Error forzado")
+        }
+
     }
 }
