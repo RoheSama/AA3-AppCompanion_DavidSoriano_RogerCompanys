@@ -56,5 +56,6 @@ dependencies {
     implementation ("com.google.firebase:firebase-messaging")
     implementation ("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-crashlytics-ktx")
+    implementation ("com.google.firebase:firebase-config-ktx:21.6.0")
 
 }

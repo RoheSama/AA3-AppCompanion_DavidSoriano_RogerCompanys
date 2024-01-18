@@ -11,7 +11,10 @@ import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.messaging.FirebaseMessaging
 import android.Manifest
+import android.view.View
+import com.google.firebase.Firebase
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.remoteconfig.remoteConfig
 import java.lang.RuntimeException
 
 enum class ProviderType {
@@ -50,6 +53,22 @@ class HomeScreen : AppCompatActivity() {
         prefs.putString("email", email)
         prefs.putString("provider", provider)
         prefs.apply()
+
+        // Recuperar datos de remote config
+        errorButton.visibility = View.INVISIBLE
+        Firebase.remoteConfig.fetchAndActivate().addOnCompleteListener{ task->
+            if(task.isSuccessful){
+                val showErrorButton = Firebase.remoteConfig.getBoolean("show_error_button")
+                val errorButtonText = Firebase.remoteConfig.getString("error_button_text")
+                if(showErrorButton){
+                    //Podem posar el boto d'error visible desde la consola de firebase
+                    errorButton.visibility = View.VISIBLE
+                }
+                errorButton.text = errorButtonText
+            }
+
+        }
+
     }
 
     fun onNotificationPermissionResponse(isGranted: Boolean){

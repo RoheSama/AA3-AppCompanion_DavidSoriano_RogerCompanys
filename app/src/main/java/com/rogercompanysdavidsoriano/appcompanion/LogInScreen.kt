@@ -13,8 +13,11 @@ import androidx.appcompat.app.AlertDialog
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.remoteconfig.remoteConfig
+import com.google.firebase.remoteconfig.remoteConfigSettings
 
 class LogInScreen : AppCompatActivity() {
 
@@ -36,6 +39,14 @@ class LogInScreen : AppCompatActivity() {
         emailEditText = findViewById(R.id.emailEditText)
         passwordEditText = findViewById(R.id.passwordEditText)
         authLayout = findViewById(R.id.authLayout)
+
+        // Remote config
+        val configSettings = remoteConfigSettings {
+            minimumFetchIntervalInSeconds = 60
+        }
+        val firebaseConfig = Firebase.remoteConfig
+        firebaseConfig.setConfigSettingsAsync(configSettings)
+        firebaseConfig.setDefaultsAsync(mapOf("show_error_button" to false, "error_button_text" to "Forzar cierre app"))
 
         setup()
         session()
