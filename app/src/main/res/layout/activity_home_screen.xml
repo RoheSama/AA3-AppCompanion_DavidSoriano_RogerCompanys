@@ -6,27 +6,119 @@
     android:layout_height="match_parent"
     tools:context=".HomeScreen">
 
-    <Button
-        android:id="@+id/logOutButton"
-        android:layout_width="218dp"
-        android:layout_height="73dp"
-        android:text="Log Out"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.919" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/splash_screen_clean" />
 
-    <Button
-        android:id="@+id/errorButton"
-        android:layout_width="222dp"
-        android:layout_height="54dp"
-        android:background="#771414"
-        android:text="Force error"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.775" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USER'S INFO" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/adressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:hint="Calle, numero, piso"
+            android:textColor="#C6C6C6"
+            android:textColorHint="#FFFFFF" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/phoneTextView"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:hint="Telefono"
+            android:textColor="#C6C6C6"
+            android:textColorHint="#FFFFFF" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#771414"
+            android:text="Guardar" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/getButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#771414"
+            android:text="Recuperar" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#771414"
+            android:text="Eliminar" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/errorButton"
+            android:layout_width="367dp"
+            android:layout_height="54dp"
+            android:background="#771414"
+            android:text="Force error" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/logOutButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#771414"
+            android:text="Log Out" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,8 +12,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.messaging.FirebaseMessaging
 import android.Manifest
 import android.view.View
+import android.widget.EditText
+import android.widget.TextView
 import com.google.firebase.Firebase
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.remoteconfig.remoteConfig
 import java.lang.RuntimeException
 
@@ -24,6 +27,8 @@ enum class ProviderType {
 
 class HomeScreen : AppCompatActivity() {
 
+    private val db = FirebaseFirestore.getInstance()
+
     private val requestNotificationPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()){ isGranted ->
 
@@ -32,12 +37,22 @@ class HomeScreen : AppCompatActivity() {
 
     private lateinit var logOutButton: Button
     private lateinit var errorButton: Button
+    private lateinit var saveButton: Button
+    private lateinit var getButton: Button
+    private lateinit var deleteButton: Button
+    private lateinit var adressTextView: EditText
+    private lateinit var phoneTextView: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
 
         logOutButton = findViewById(R.id.logOutButton)
         errorButton = findViewById(R.id.errorButton)
+        saveButton = findViewById(R.id.saveButton)
+        getButton = findViewById(R.id.getButton)
+        deleteButton = findViewById(R.id.deleteButton)
+        adressTextView = findViewById(R.id.adressTextView)
+        phoneTextView = findViewById(R.id.phoneTextView)
 
         askNotificationPermission()
 
@@ -133,5 +148,24 @@ class HomeScreen : AppCompatActivity() {
             throw RuntimeException("Error forzado")
         }
 
+        saveButton.setOnClickListener{
+
+            db.collection("users").document(email).set(
+                hashMapOf("provider" to provdirer,
+                    "adress" to adressTextView.text.toString(),
+                    "phone" to phoneTextView.text.toString())
+            )
+        }
+
+        getButton.setOnClickListener{
+            db.collection("users").document(email).get().addOnSuccessListener {
+                adressTextView.setText(it.get("adress") as String?)
+                phoneTextView.setText(it.get("phone") as String?)
+            }
+        }
+
+        deleteButton.setOnClickListener{
+            db.collection("users").document(email).delete()
+        }
     }
 }
