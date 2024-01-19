@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.messaging.FirebaseMessaging
 import android.Manifest
+import android.content.Intent
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -40,6 +41,7 @@ class HomeScreen : AppCompatActivity() {
     private lateinit var saveButton: Button
     private lateinit var getButton: Button
     private lateinit var deleteButton: Button
+    private lateinit var goApp: Button
     private lateinit var adressTextView: EditText
     private lateinit var phoneTextView: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,6 +55,13 @@ class HomeScreen : AppCompatActivity() {
         deleteButton = findViewById(R.id.deleteButton)
         adressTextView = findViewById(R.id.adressTextView)
         phoneTextView = findViewById(R.id.phoneTextView)
+
+        goApp = findViewById(R.id.goAppButton)
+
+        goApp.setOnClickListener{
+            val intent = Intent(this, NewsActivity::class.java)
+            startActivity(intent)
+        }
 
         askNotificationPermission()
 
@@ -75,9 +84,13 @@ class HomeScreen : AppCompatActivity() {
             if(task.isSuccessful){
                 val showErrorButton = Firebase.remoteConfig.getBoolean("show_error_button")
                 val errorButtonText = Firebase.remoteConfig.getString("error_button_text")
+                val signOutButton = Firebase.remoteConfig.getBoolean("sign_out_button")
                 if(showErrorButton){
                     //Podem posar el boto d'error visible desde la consola de firebase
                     errorButton.visibility = View.VISIBLE
+                }
+                if(!signOutButton){
+                    logOutButton.visibility = View.INVISIBLE
                 }
                 errorButton.text = errorButtonText
             }
