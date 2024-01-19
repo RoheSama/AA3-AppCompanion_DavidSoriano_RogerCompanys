@@ -3,13 +3,12 @@ package com.rogercompanysdavidsoriano.appcompanion
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.widget.ImageButton
 
 class NewsActivity : AppCompatActivity() {
-    private lateinit var guideButton: Button
-    private lateinit var buildsButton: Button
-    private lateinit var settingsButton: Button
-
+    private lateinit var guideButton: ImageButton
+    private lateinit var buildsButton: ImageButton
+    private lateinit var settingsButton: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)

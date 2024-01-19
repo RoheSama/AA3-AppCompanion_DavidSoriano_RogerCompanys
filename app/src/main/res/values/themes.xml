@@ -7,4 +7,28 @@
     </style>
 
     <style name="Theme.AppCompanion" parent="Base.Theme.AppCompanion" />
+
+    <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/night_mode</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">#99FFFFFF</item>
+    </style>
+
+    <style name="notificationsSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/notifications</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">#99FFFFFF</item>
+    </style>
+
+    <style name="privateAccountSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/private_account</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">#99FFFFFF</item>
+    </style>
+
+    <style name="securitySwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/security</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">#99FFFFFF</item>
+    </style>
 </resources>

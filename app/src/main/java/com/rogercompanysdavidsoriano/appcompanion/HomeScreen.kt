@@ -84,9 +84,13 @@ class HomeScreen : AppCompatActivity() {
             if(task.isSuccessful){
                 val showErrorButton = Firebase.remoteConfig.getBoolean("show_error_button")
                 val errorButtonText = Firebase.remoteConfig.getString("error_button_text")
+                val signOutButton = Firebase.remoteConfig.getBoolean("sign_out_button")
                 if(showErrorButton){
                     //Podem posar el boto d'error visible desde la consola de firebase
                     errorButton.visibility = View.VISIBLE
+                }
+                if(!signOutButton){
+                    logOutButton.visibility = View.INVISIBLE
                 }
                 errorButton.text = errorButtonText
             }
