@@ -28,6 +28,7 @@ class NewsActivity : AppCompatActivity() {
     private lateinit var buildsButton: ImageButton
     private lateinit var settingsButton: ImageButton
     private lateinit var uploadImageButton: AppCompatButton
+    private lateinit var chooseButton: AppCompatButton
     private lateinit var ivImage: ImageView
 
     var curFile: Uri? = null
@@ -43,9 +44,10 @@ class NewsActivity : AppCompatActivity() {
         settingsButton = findViewById(R.id.settingsButton)
 
         uploadImageButton = findViewById(R.id.image_button)
+        chooseButton = findViewById(R.id.choose_button2)
         ivImage = findViewById(R.id.av_image)
 
-        ivImage.setOnClickListener{
+        chooseButton.setOnClickListener{
             Intent(Intent.ACTION_GET_CONTENT).also {
                 it.type = "image/*"
                 startActivityForResult(it, REQUEST_CODE_IMAGE_PICK)
