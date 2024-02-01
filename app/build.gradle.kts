@@ -58,5 +58,5 @@ dependencies {
     implementation("com.google.firebase:firebase-crashlytics-ktx")
     implementation ("com.google.firebase:firebase-config-ktx:21.6.0")
     implementation("com.google.firebase:firebase-firestore")
-
+    implementation("com.google.firebase:firebase-storage")
 }
