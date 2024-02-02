@@ -13,6 +13,7 @@
     <color name="baseBlue">#012B54</color>
     <color name="baseRed">#661209</color>
     <color name="baseGreen">#1f422c</color>
+    <color name="GreenBottom">#142816</color>
 
     <!-- Auxiliary Colors-->
     <color name="debugColor">#FF00FB</color>

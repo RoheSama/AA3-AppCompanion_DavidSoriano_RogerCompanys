@@ -67,6 +67,11 @@ class NewsActivity : AppCompatActivity() {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
         }
+
+        guideButton.setOnClickListener {
+            val intent = Intent(this, GuideActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private  fun uploadImageToStorage(filename: String) = CoroutineScope(Dispatchers.IO).launch {

@@ -2,17 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
-    tools:context=".NewsActivity">
+    tools:context=".Rathalos">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="00dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/news_header"
+        app:srcCompat="@drawable/guide_header"
         tools:ignore="MissingConstraints"/>
 
     <ImageButton
@@ -21,49 +19,40 @@
         android:layout_height="wrap_content"
         android:background="@null"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.543"
         app:srcCompat="@drawable/settings"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="30dp" />
 
     <ImageView
-        android:id="@+id/av_image"
-        android:layout_width="213dp"
-        android:layout_height="194dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:id="@+id/monsterinfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="200dp"
+        app:srcCompat="@drawable/rathalospicture"
+        tools:ignore="MissingConstraints"/>
 
-    <Button
-        android:id="@+id/image_button"
-        android:layout_width="186dp"
-        android:layout_height="62dp"
-        android:text="Upload image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.656" />
+    <ImageView
+        android:id="@+id/monstername"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/rathalosname"
+        tools:ignore="MissingConstraints"/>
 
-    <Button
-        android:id="@+id/choose_button2"
-        android:layout_width="186dp"
-        android:layout_height="62dp"
-        android:text="Choose image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744" />
+    <ImageView
+        android:id="@+id/monstertext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        app:srcCompat="@drawable/rathalostext"
+        tools:ignore="MissingConstraints"/>
+    <ImageView
+        android:id="@+id/monstertable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="525dp"
+        app:srcCompat="@drawable/rathalostable"
+        tools:ignore="MissingConstraints"/>
 
     <LinearLayout
 
@@ -86,7 +75,7 @@
             android:layout_height="match_parent"
             android:scaleType="fitXY"
             android:background="@null"
-            android:src="@drawable/newsselected" />
+            android:src="@drawable/news_button" />
 
         <ImageButton
             android:id="@+id/guideButton"
@@ -94,7 +83,7 @@
             android:layout_height="match_parent"
             android:scaleType="fitXY"
             android:background="@null"
-            android:src="@drawable/guide_button" />
+            android:src="@drawable/guideselected" />
 
         <ImageButton
             android:id="@+id/buildsButton"
@@ -113,6 +102,4 @@
 
 
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

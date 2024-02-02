@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".GuideActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="00dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/guide_header"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideTop"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.531"
+        app:srcCompat="@drawable/settings"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/guideTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="600dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal"
+        android:src="@drawable/guidetop">
+
+        <ImageButton
+            android:id="@+id/monsters"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/guidemonsterselected" />
+
+        <ImageButton
+            android:id="@+id/quests"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/guidequests" />
+
+        <ImageButton
+            android:id="@+id/items"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/guideitems" />
+
+        <ImageButton
+            android:id="@+id/equipment"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/guideequipment" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="200dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        android:background="@color/black"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+        <LinearLayout
+            android:id="@+id/monsters1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageButton
+                android:id="@+id/monster1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/monster_b" />
+
+            <ImageButton
+                android:id="@+id/monster2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/monster_ra"/>
+
+            <ImageButton
+                android:id="@+id/monster3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/monster_rath" />
+
+            <ImageButton
+                android:id="@+id/monster4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:src="@drawable/monster_k" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+
+        android:id="@+id/Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="790dp"
+        android:orientation="horizontal"
+        android:background="@color/GreenBottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/newsButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/news_button" />
+
+        <ImageButton
+            android:id="@+id/guideButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/guideselected" />
+
+        <ImageButton
+            android:id="@+id/buildsButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/build_button" />
+        <ImageButton
+            android:id="@+id/equipmentButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/chad_button" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
