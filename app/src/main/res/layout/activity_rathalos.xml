@@ -13,16 +13,6 @@
         app:srcCompat="@drawable/guide_header"
         tools:ignore="MissingConstraints"/>
 
-    <ImageButton
-        android:id="@+id/settingsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/settings"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="30dp" />
-
     <ImageView
         android:id="@+id/monsterinfo"
         android:layout_width="match_parent"
@@ -38,6 +28,20 @@
         android:layout_marginTop="100dp"
         app:srcCompat="@drawable/rathalosname"
         tools:ignore="MissingConstraints"/>
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.508"
+        app:srcCompat="@drawable/settings"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/monstertext"
