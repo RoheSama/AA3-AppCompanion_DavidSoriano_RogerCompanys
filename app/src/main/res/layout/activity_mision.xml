@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MissionActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="00dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/guide_header"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.783"
+        app:srcCompat="@drawable/settings"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/guideTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="600dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal"
+        android:src="@drawable/guidetop">
+
+        <ImageButton
+            android:id="@+id/monsters"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/guidemonsters" />
+
+        <ImageButton
+            android:id="@+id/quests"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/guidemisionsselected" />
+
+        <ImageButton
+            android:id="@+id/items"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/guideitems" />
+
+        <ImageButton
+            android:id="@+id/equipment"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/guideequipment" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="200dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/mission1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/misionone"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/mission2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/misiontwo"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/mission3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/misionthree"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/mission4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/misionfour"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+                android:id="@+id/mission5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="400dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/misionfive"
+                tools:ignore="MissingConstraints" />
+
+    <ImageButton
+                android:id="@+id/mission6"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="500dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/misionsix"
+                tools:ignore="MissingConstraints" />
+
+    <ImageButton
+                android:id="@+id/mission7"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="600dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/misionseven"
+                tools:ignore="MissingConstraints" />
+    <ImageButton
+                android:id="@+id/mission8"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="700dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/misioneight"
+                tools:ignore="MissingConstraints" />
+    <ImageButton
+                android:id="@+id/mission8"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="800dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/misionnine"
+                tools:ignore="MissingConstraints" />
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+    <LinearLayout
+
+        android:id="@+id/Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="790dp"
+        android:orientation="horizontal"
+        android:background="@color/GreenBottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/newsButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/news_button" />
+
+        <ImageButton
+            android:id="@+id/guideButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/guideselected" />
+
+        <ImageButton
+            android:id="@+id/buildsButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/build_button" />
+        <ImageButton
+            android:id="@+id/equipmentButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/chad_button" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
